@@ -3,7 +3,7 @@ public class Abra {
     public static void main(String[] args) {
         String abraKadabra = "ABRAKADABRA";
         int charsToPrint = 1;
-        int spaces = abraKadabra.length(); // tweak maybe
+        int spaces = abraKadabra.length(); 
         abr(abraKadabra, charsToPrint, spaces);
 
     }
