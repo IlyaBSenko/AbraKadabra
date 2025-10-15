@@ -3,16 +3,18 @@ public class Abra {
     public static void main(String[] args) {
         String abraKadabra = "ABRAKADABRA";
         int charsToPrint = 1;
-        abr(abraKadabra, charsToPrint);
+        int spaces = abraKadabra.length(); // tweak maybe
+        abr(abraKadabra, charsToPrint, spaces);
 
     }
 
-    public static void abr(String str, int charsToPrint) {
+    public static void abr(String str, int charsToPrint, int spaces) {
         if (charsToPrint > str.length()) {
             return;
         }
-        System.out.println(str.substring(0, charsToPrint));
-        abr(str, charsToPrint + 1);
+        String empty = " ";
+        System.out.println(empty.repeat(spaces) + str.substring(0, charsToPrint) + empty.repeat(spaces));
+        abr(str, charsToPrint + 1, spaces - 1);
     }
 }
 
