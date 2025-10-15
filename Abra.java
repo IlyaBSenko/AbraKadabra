@@ -2,16 +2,17 @@ public class Abra {
 
     public static void main(String[] args) {
         String abraKadabra = "ABRAKADABRA";
-        abr(abraKadabra);
+        int charsToPrint = 1;
+        abr(abraKadabra, charsToPrint);
 
     }
 
-    public static void abr(String str) {
-        if (str == null || str.isEmpty()) {
+    public static void abr(String str, int charsToPrint) {
+        if (charsToPrint > str.length()) {
             return;
         }
-        System.out.println(str.charAt(0));
-        abr(str.substring(1));
+        System.out.println(str.substring(0, charsToPrint));
+        abr(str, charsToPrint + 1);
     }
 }
 
